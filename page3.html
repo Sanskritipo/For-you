@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> ehehehe😜🤭❤️</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.card{
+max-width:600px;
+margin:20px;
+}
+
+.letter{
+text-align:left;
+background:#fff7fb;
+padding:20px;
+border-radius:20px;
+margin:20px 0;
+max-height:350px;
+overflow-y:auto;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.noBtn{
+background:#cccccc;
+color:#333;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💌 A Little Letter For My Mickey ❤️</h1>
+
+<p style="color:#888;">
+Read slowly 😌✨
+</p>
+
+<div class="letter">
+
+<p>
+
+You came into my thoughts so quietly,
+and turned my calm into poetry ❤️
+
+<br><br>
+
+Now even ordinary moments feel new,
+because everything reminds me of you 😌✨
+
+<br><br>
+
+I don’t chase perfect days anymore,
+I just hope they all start with you 💘
+
+<br><br>
+
+I know we've become so much stronger even with distance between us.
+
+All our little misunderstandings and negativity have slowly faded, and now we barely get angry at each other.
+
+We understand each other better, trust each other more, and love each other more deeply.
+
+<br><br>
+
+Even when you're tired from work or dealing with frustrating moments, you still somehow find time for me and make me smile.
+
+That means more than you probably realize ❤️
+
+<br><br>
+
+I appreciate you so much.
+
+I just want to do my best for you too and bring peace, comfort, understanding, and lots of love into your life 💕
+
+</p>
+
+</div>
+
+<h3>
+Want to know why you're so special? 👀❤️
+</h3>
+
+<div class="buttons">
+
+<button onclick="window.location.href='page4.html'">
+YES ❤️
+</button>
+
+<button class="noBtn" id="noBtn">
+NO 🙈
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+// Escaping NO button
+const noBtn =
+document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover",()=>{
+
+noBtn.style.position="absolute";
+
+noBtn.style.left=
+Math.random()*70+"%";
+
+noBtn.style.top=
+Math.random()*70+"%";
+
+});
+
+// Floating hearts
+for(let i=0;i<25;i++){
+
+let heart =
+document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML =
+Math.random()>0.5 ? "❤️" : "✨";
+
+heart.style.left =
+Math.random()*100+"vw";
+
+heart.style.fontSize =
+(15+Math.random()*20)+"px";
+
+heart.style.animationDuration =
+(6+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
