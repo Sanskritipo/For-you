@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever & Always ❤️</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Forever & Always ❤️</h1>
+
+<p>
+
+You are my calm.
+
+<br><br>
+
+You are my happiness.
+
+<br><br>
+
+You are my favorite person.
+
+<br><br>
+
+No matter how busy life gets,
+I'll always make time for you ❤️
+
+<br><br>
+
+Thank you for every smile,
+every effort,
+every call,
+and every little thing you do.
+
+<br><br>
+
+I know life gets tiring sometimes,
+but I hope you always remember
+that someone is cheering for you,
+believing in you,
+and loving you every day 💕
+
+<br><br>
+
+And if I had to choose again...
+
+<br><br>
+
+I'd still choose you ❤️
+
+</p>
+
+<h2>
+✨ Just wanted to make you smile today ✨
+</h2>
+
+<p>
+Forever Yours ♾️
+</p>
+
+<div class="buttons">
+
+<button onclick="window.location.href='index.html'">
+Replay Our Journey ✨
+</button>
+
+<button onclick="goodbye()">
+Close With A Hug 🤗
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function goodbye(){
+
+document.body.innerHTML = `
+
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ffb6d9,#ffdce9,#fff0f6);
+padding:20px;
+">
+
+<div>
+
+<h1 style="color:#ff4d88;">
+❤️ Thank You ❤️
+</h1>
+
+<p style="
+font-size:18px;
+line-height:1.8;
+color:#555;
+">
+
+Thank you for reading my little surprise 💕
+
+<br><br>
+
+I hope it made you smile 😘
+
+<br><br>
+
+Take care of yourself, okay? ❤️
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+// Floating hearts
+for(let i=0;i<25;i++){
+
+let heart =
+document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML =
+Math.random()>0.5 ? "❤️" : "✨";
+
+heart.style.left =
+Math.random()*100+"vw";
+
+heart.style.fontSize =
+(15+Math.random()*20)+"px";
+
+heart.style.animationDuration =
+(6+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
