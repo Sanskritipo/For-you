@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Granted ❤️</title>
 
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Access Granted ❤️</h1>
+
+<p>
+Welcome, Bebu...
+<br><br>
+You've unlocked a little place made specially for you ✨
+<br><br>
+Inside are a few things I wanted to tell you ❤️
+</p>
+
+<button id="startBtn"
+onclick="window.location.href='index.html'"
+style="display:none;">
+Begin The Journey ➜
+</button>
+
+</div>
+
+<script>
+
+// Show button after 3 seconds
+setTimeout(() => {
+document.getElementById("startBtn").style.display = "inline-block";
+}, 3000);
+
+// Floating hearts
+for(let i=0;i<25;i++){
+
+let heart = document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML =
+Math.random() > 0.5 ? "❤️" : "✨";
+
+heart.style.left =
+Math.random()*100 + "vw";
+
+heart.style.fontSize =
+(15 + Math.random()*20) + "px";
+
+heart.style.animationDuration =
+(6 + Math.random()*6) + "s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
