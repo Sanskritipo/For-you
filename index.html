@@ -3,6 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secret Gateway ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🔐 Secret Gateway</h1>
+
+<p>
+Only one special person can enter this place ❤️
+<br><br>
+Enter the secret password...
+</p>
+
+<input
+type="password"
+id="pass"
+placeholder="Password ❤️"
+style="
+width:90%;
+padding:12px;
+border:none;
+border-radius:15px;
+text-align:center;
+font-size:16px;
+margin-top:10px;
+">
+
+<br>
+
+<button onclick="checkPass()">
+Unlock My Heart ❤️
+</button>
+
+<p style="font-size:13px;opacity:.7;">
+Hint: You already know it 😉
+</p>
+
+</div>
+
+<script>
+
+function checkPass(){
+
+let p =
+document.getElementById("pass").value;
+
+if(p==="prasans"){
+
+window.location.href=
+"access.html";
+
+}else{
+
+alert("Wrong password mister 😤❤️");
+
+}
+
+}
+
+for(let i=0;i<25;i++){
+
+let heart=
+document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=
+Math.random()>0.5 ? "❤️" : "✨";
+
+heart.style.left=
+Math.random()*100+"vw";
+
+heart.style.fontSize=
+(15+Math.random()*20)+"px";
+
+heart.style.animationDuration=
+(6+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For My Favorite Person ❤️</title>
 
 <link rel="stylesheet" href="style.css">
