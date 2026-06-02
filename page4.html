@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reasons I Love You ❤️</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.reasonBox{
+background:#fff7fb;
+padding:25px;
+border-radius:20px;
+margin:20px 0;
+min-height:120px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+#reason{
+font-size:22px;
+color:#ff4d88;
+font-weight:bold;
+}
+
+.counter{
+color:#888;
+margin-bottom:10px;
+}
+
+#finalBtn{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌹 Reasons I Love You ❤️</h1>
+
+<p class="counter">
+Reason <span id="number">0</span> of 6
+</p>
+
+<div class="reasonBox">
+<p id="reason">
+Click below to begin ❤️
+</p>
+</div>
+
+<button id="nextBtn" onclick="nextReason()">
+Show Next Reason ❤️
+</button>
+
+<br>
+
+<button id="finalBtn"
+onclick="window.location.href='page5.html'">
+One Last Thing 💌
+</button>
+
+</div>
+
+<script>
+
+const reasons = [
+
+"Because you always care for me ❤️",
+
+"Because you make me smile even on difficult days 😌",
+
+"Because you believe in us 💕",
+
+"Because you're my safe place ❤️",
+
+"Because life feels brighter with you ✨",
+
+"Because I'd still choose you again and again ♾️"
+
+];
+
+let current = 0;
+
+function nextReason(){
+
+if(current < reasons.length){
+
+document.getElementById("reason").innerHTML =
+reasons[current];
+
+document.getElementById("number").innerHTML =
+current + 1;
+
+current++;
+
+}
+
+if(current === reasons.length){
+
+document.getElementById("nextBtn").style.display =
+"none";
+
+document.getElementById("finalBtn").style.display =
+"inline-block";
+
+}
+
+}
+
+// Floating hearts
+for(let i=0;i<25;i++){
+
+let heart =
+document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML =
+Math.random()>0.5 ? "❤️" : "✨";
+
+heart.style.left =
+Math.random()*100+"vw";
+
+heart.style.fontSize =
+(15+Math.random()*20)+"px";
+
+heart.style.animationDuration =
+(6+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
