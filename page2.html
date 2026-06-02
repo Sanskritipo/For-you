@@ -3,6 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favorite Person ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎁 Hey Puku ❤️</h1>
+
+<p id="message"></p>
+
+<button id="nextBtn"
+onclick="window.location.href='page2.html'"
+style="display:none;">
+Open Your Surprise 🎁
+</button>
+
+</div>
+
+<script>
+
+// Typing message
+const text =
+"I made this little surprise just to make you smile today ✨❤️";
+
+let i = 0;
+
+function typeText(){
+
+if(i < text.length){
+
+document.getElementById("message").innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(typeText,50);
+
+}else{
+
+document.getElementById("nextBtn").style.display =
+"inline-block";
+
+}
+
+}
+
+typeText();
+
+
+// Floating hearts
+for(let i=0;i<25;i++){
+
+let heart =
+document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML =
+Math.random() > 0.5 ? "❤️" : "✨";
+
+heart.style.left =
+Math.random()*100 + "vw";
+
+heart.style.fontSize =
+(15 + Math.random()*20) + "px";
+
+heart.style.animationDuration =
+(6 + Math.random()*6) + "s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wait Wait 😘</title>
 
 <link rel="stylesheet" href="style.css">
